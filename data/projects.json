@@ -1,0 +1,75 @@
+{
+  "$comment": "Project showcase data. To add a project, append one object to `projects`. Required: id, name, tagline, description, docs. Everything else is optional. See README.md for the field reference.",
+  "projects": [
+    {
+      "id": "sandboxing",
+      "name": "agentctl",
+      "repo": "apomonosi/sandboxing",
+      "tagline": "Hardened, ephemeral sandboxes for running AI agents.",
+      "description": "One CLI over OS-native backends (Incus on Linux, Lima on macOS, Hyper-V on Windows) that defends against host escape and lateral movement alike. Every sandbox denies egress to the local network and to the internet outside an explicit allowlist, and every command can be previewed as the exact backend calls it would run.",
+      "status": "active",
+      "category": "tooling",
+      "icon": "sandbox",
+      "tags": [
+        "isolation",
+        "agents",
+        "security",
+        "go"
+      ],
+      "highlights": [
+        "LAN egress denied by default",
+        "Incus · Lima · Hyper-V",
+        "--preview prints every backend call"
+      ],
+      "snippet": "go install github.com/apomonosi/sandboxing/cmd/agentctl@latest",
+      "docs": "https://apomonosi.github.io/sandboxing/",
+      "source": "https://github.com/apomonosi/sandboxing"
+    },
+    {
+      "id": "ai-microservices",
+      "name": "ai-microservices",
+      "repo": "apomonosi/ai-microservices",
+      "tagline": "Narrow, single-purpose AI actions on small local models.",
+      "description": "A YAML-driven catalog of small AI actions (proofread, translate, summarize, review), each a tightly scoped, version-controlled prompt with a fixed input and output shape. Built to run on a small model on your own machine: no state, no account, text in and text out, reviewable at every step.",
+      "status": "active",
+      "category": "tooling",
+      "icon": "actions",
+      "tags": [
+        "local-ai",
+        "privacy",
+        "cli",
+        "python"
+      ],
+      "highlights": [
+        "One YAML file per service",
+        "Small local models, private by default",
+        "Shortcut, picker or Unix pipe"
+      ],
+      "snippet": "cat draft.md | ai-actions run proofread --stdin --no-gui",
+      "docs": "https://apomonosi.github.io/ai-microservices/",
+      "source": "https://github.com/apomonosi/ai-microservices"
+    },
+    {
+      "id": "agentic",
+      "name": "Agentic AI Security",
+      "repo": "apomonosi/agentic",
+      "tagline": "A field guide to the risks of autonomous AI agents.",
+      "description": "A reference site on what goes wrong when coding agents act autonomously, and what to do about it: documented real-world incidents, an L1–L5 autonomy taxonomy with environment requirements per level, the emerging standards landscape (NIST CAISI, OWASP Agentic Top 10, CSA MAESTRO) and practical deployment checklists.",
+      "status": "published",
+      "category": "research",
+      "icon": "shield",
+      "tags": [
+        "research",
+        "standards",
+        "governance"
+      ],
+      "highlights": [
+        "Documented real-world incidents",
+        "L1–L5 autonomy levels",
+        "Deployment checklists & red lines"
+      ],
+      "docs": "https://apomonosi.github.io/agentic/",
+      "source": "https://github.com/apomonosi/agentic"
+    }
+  ]
+}
