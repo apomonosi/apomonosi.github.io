@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>apomonosi · Safe AI-driven development</title>
+  <meta name="description" content="apomonosi builds open tools and research for safe, responsible AI-driven development: sandboxes for AI agents, small local AI actions, and evidence-based guidance on agent risk.">
+  <meta name="theme-color" content="#05070d">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="apomonosi · Safe AI-driven development">
+  <meta property="og:description" content="Let agents run. Keep them contained. Open tools and research for safe, responsible AI-driven development.">
+  <meta property="og:url" content="https://apomonosi.github.io/">
+  <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="modulepreload" href="assets/js/hero.js">
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="#top" aria-label="apomonosi home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 2.2"/>
+        <circle cx="16" cy="16" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+        <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      </svg>
+      <span class="brand__word">apomonosi</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#principles">Principles</a>
+      <a href="#built">How it's built</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="kbd-btn" type="button" data-palette-open aria-label="Open command palette">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="kbd-btn__label">Search</span>
+        <kbd data-mod-key>⌘K</kbd>
+      </button>
+      <a class="icon-link" href="https://github.com/apomonosi" aria-label="apomonosi on GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────────────────────── HERO ───────────────────────── -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>apomonosi · ἀπομόνωση · <em>isolation</em></p>
+        <h1 id="hero-title" class="hero__title">
+          Let agents run.<br>
+          <span class="gradient-text">Keep them contained.</span>
+        </h1>
+        <p class="hero__lede">
+          Open tools and research for <strong>safe, responsible AI-driven development</strong>:
+          sandboxes that keep agents off your host and your network, small local models
+          for everyday work, and the evidence behind both.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#projects">Explore projects <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#terminal"><span class="mono" aria-hidden="true">&gt;_</span> Try the terminal</a>
+        </div>
+        <p class="hero__hint" data-hero-hint>
+          <span class="hint-key" aria-hidden="true">◎</span> Move your cursor to steer the agents. Click to stage an escape attempt.
+        </p>
+      </div>
+
+      <aside class="hud" aria-label="Containment field status (live)">
+        <div class="hud__row hud__title"><span class="pulse-dot pulse-dot--ok" aria-hidden="true"></span>CONTAINMENT FIELD</div>
+        <div class="hud__row"><span>agents</span><b data-hud-agents>0</b></div>
+        <div class="hud__row"><span>escape attempts</span><b data-hud-hits>0</b></div>
+        <div class="hud__row"><span>escapes</span><b class="ok">0</b></div>
+        <div class="hud__row"><span>integrity</span><b class="ok">100.0%</b></div>
+      </aside>
+
+      <a class="scroll-cue" href="#projects" aria-label="Scroll to projects"><span></span></a>
+    </section>
+
+    <!-- ───────────────────────── PRINCIPLE TICKER ───────────────────────── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>isolate by default</span><i>◆</i><span>deny the LAN</span><i>◆</i><span>least privilege</span><i>◆</i><span>ephemeral by design</span><i>◆</i><span>preview before you run</span><i>◆</i><span>small models, local first</span><i>◆</i><span>evidence over hype</span><i>◆</i><span>humans stay in the loop</span><i>◆</i>
+        <span>isolate by default</span><i>◆</i><span>deny the LAN</span><i>◆</i><span>least privilege</span><i>◆</i><span>ephemeral by design</span><i>◆</i><span>preview before you run</span><i>◆</i><span>small models, local first</span><i>◆</i><span>evidence over hype</span><i>◆</i><span>humans stay in the loop</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ───────────────────────── PROJECTS ───────────────────────── -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section__head reveal">
+        <p class="kicker">01 / Projects</p>
+        <h2 id="projects-title">Experiments in containment</h2>
+        <p class="section__lede">Each project tackles one part of making AI-driven development safe. Every card links to its full documentation.</p>
+      </div>
+
+      <div class="filters reveal" role="toolbar" aria-label="Filter projects by tag" data-filters></div>
+
+      <div class="projects" data-projects aria-live="polite">
+        <noscript>
+          <ul class="noscript-list">
+            <li><a href="https://apomonosi.github.io/sandboxing/">agentctl: hardened, ephemeral sandboxes for AI agents</a></li>
+            <li><a href="https://apomonosi.github.io/ai-microservices/">ai-microservices: narrow AI actions on small local models</a></li>
+            <li><a href="https://apomonosi.github.io/agentic/">Agentic AI Security: a field guide to autonomous agent risk</a></li>
+          </ul>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── TERMINAL ───────────────────────── -->
+    <section class="section section--split" id="terminal" aria-labelledby="terminal-title">
+      <div class="section__head reveal">
+        <p class="kicker">02 / Terminal</p>
+        <h2 id="terminal-title">See the walls before you trust them</h2>
+        <p class="section__lede">
+          <code>agentctl --preview</code> prints the exact backend commands a sandbox would be built from.
+          Nothing is hidden and nothing runs until you say so. Watch the replay, then type
+          <code>help</code> and try it yourself.
+        </p>
+        <ul class="ticks">
+          <li>Default-deny egress with an explicit allowlist</li>
+          <li>RFC1918 and link-local ranges rejected</li>
+          <li>Ephemeral: create, use, delete</li>
+        </ul>
+        <p class="fineprint">Simulated in your browser. Command output follows the agentctl documentation.</p>
+      </div>
+
+      <div class="term reveal" data-terminal>
+        <div class="term__bar">
+          <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="term__title">you@workstation: ~ <span class="term__badge">simulated</span></span>
+          <button class="term__replay" type="button" data-term-replay aria-label="Replay demo">↻ replay</button>
+        </div>
+        <div class="term__screen" data-term-screen>
+          <div class="term__out" data-term-out role="log" aria-live="polite" aria-label="Terminal output"></div>
+          <label class="term__line">
+            <span class="term__prompt" aria-hidden="true">❯</span>
+            <span class="visually-hidden">Terminal command</span>
+            <input class="term__input" data-term-input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="send">
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── PRINCIPLES ───────────────────────── -->
+    <section class="section" id="principles" aria-labelledby="principles-title">
+      <div class="section__head reveal">
+        <p class="kicker">03 / Principles</p>
+        <h2 id="principles-title">Isolation is a feature, not a constraint</h2>
+        <p class="section__lede">AI agents are useful because they act. The same capability is the risk. We don't ban them, we give them walls.</p>
+      </div>
+      <div class="principles">
+        <article class="principle reveal">
+          <span class="principle__n">01</span>
+          <h3>Isolate by default</h3>
+          <p>Agents get an ephemeral sandbox, not your laptop. Host escape <em>and</em> lateral movement across your network are both in the threat model.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle__n">02</span>
+          <h3>Show your work</h3>
+          <p>Every sandbox can be previewed as plain backend commands. Every prompt is a version-controlled file. Every output is reviewable before it lands.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle__n">03</span>
+          <h3>Right-size the model</h3>
+          <p>Most everyday tasks don't need a frontier model in someone else's data centre. Narrow tasks on small local models are cheaper and private.</p>
+        </article>
+        <article class="principle reveal">
+          <span class="principle__n">04</span>
+          <h3>Evidence over hype</h3>
+          <p>Guidance grounded in documented incidents and emerging standards from NIST, OWASP and CSA, not in vendor promises.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── HOW IT'S BUILT ───────────────────────── -->
+    <section class="section" id="built" aria-labelledby="built-title">
+      <div class="section__head reveal">
+        <p class="kicker">04 / How it's built</p>
+        <h2 id="built-title">This page is the demo</h2>
+        <p class="section__lede">
+          An AI coding agent wrote the containment-field shader, the terminal, the command palette and this
+          section from a four-question brief, working in an isolated cloud container. It uses no framework,
+          no build step and no dependencies. The numbers below are counted live from the files your browser just loaded.
+        </p>
+      </div>
+
+      <div class="built">
+        <div class="stats reveal" data-stats>
+          <div class="stat"><b data-stat="lines">—</b><span>lines of source</span></div>
+          <div class="stat"><b data-stat="kb">—</b><span>KB uncompressed</span></div>
+          <div class="stat"><b>0</b><span>dependencies</span></div>
+          <div class="stat"><b>0</b><span>build steps</span></div>
+        </div>
+
+        <div class="manifest reveal">
+          <div class="manifest__head"><span>source manifest</span><span class="mono" data-stat="files">…</span></div>
+          <ul class="manifest__list" data-manifest></ul>
+        </div>
+
+        <div class="addproj reveal">
+          <div class="addproj__text">
+            <h3>Adding a project is one JSON object</h3>
+            <p>The showcase, filters, command palette and terminal all read from
+              <a href="https://github.com/apomonosi/apomonosi.github.io/blob/main/data/projects.json"><code>data/projects.json</code></a>.
+              Append an entry like this one and the new project appears everywhere.</p>
+          </div>
+          <pre class="code" data-example-json><code>…</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <a class="brand" href="#top" aria-label="Back to top">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 2.2"/>
+            <circle cx="16" cy="16" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+            <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+          </svg>
+          <span class="brand__word">apomonosi</span>
+        </a>
+        <p class="footer__def"><span class="mono">ἀπομόνωση</span> (Greek, n.): isolation, the act of setting apart.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="https://github.com/apomonosi">GitHub</a>
+        <a href="#projects">Projects</a>
+        <button type="button" class="linklike" data-palette-open>Command palette</button>
+        <button type="button" class="linklike" data-motion-toggle>Pause motion</button>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ───────────────────────── COMMAND PALETTE ───────────────────────── -->
+  <dialog class="palette" data-palette aria-label="Command palette">
+    <div class="palette__box">
+      <div class="palette__search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input class="palette__input" data-palette-input type="text" placeholder="Search projects, sections, actions…" autocomplete="off" spellcheck="false"
+               role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list">
+        <kbd>esc</kbd>
+      </div>
+      <ul class="palette__list" id="palette-list" role="listbox" data-palette-list aria-label="Results"></ul>
+      <div class="palette__foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+        <span><kbd>↵</kbd> select</span>
+        <span><kbd>/</kbd> or <kbd data-mod-key>⌘K</kbd> open</span>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>
